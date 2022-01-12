@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft_magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+section {
+    min-height: 100vh;
+    background-color: var(--violet);
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    padding-top: 60px;
+}
+
+.max-width {
+    padding: 0 80px;
+}
+
+.head img{
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.mid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-area: "left" "right";
+    margin-top: 84px;
+}
+
+.mid .left img{
+    display: block;
+}
+
+.mid .right{
+    padding: 40px 10px 0 50px;
+}
+
+.mid .right h1{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.mid .right p {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 30px 0 30px;
+}
+
+.mid .right a {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--violet);
+    background: white;
+    padding: 14px 60px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px hsl(257, 40%, 35%),
+    10px 10px 15px hsl(257, 40%, 35%);
+    transition: all 0.2s ease;
+}
+
+.mid .right a:hover{
+    background: var(--soft_magenta);
+    color: white;
+}
+
+.socials{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.socials a{
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 15px;
+    transition: all 0.2s ease;
+}
+
+.socials a:hover{
+    border: 1px solid hsl(300, 69%, 60%);
+    color: hsl(300, 69%, 60%)
+}
+
+
+/* footer section styling */
+footer {
+  background-color: var(--violet);
+  padding: 14px 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  color: var(--soft_magenta);
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1285px) {
+    section {
+        background-image: url("images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .head img{
+    width: 250px;
+    height: auto;
+    }
+
+    .mid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    }
+
+    .mid .left img{
+    display: block;
+    width: 100%;
+    }
+
+    .mid .right{
+    padding: 0;
+    text-align: center;
+    margin-top: 120px;
+    }
+
+    .mid .right h1{
+    font-size: 46px;
+    }
+
+    .mid .right p {
+    font-size: 31px;
+    margin: 30px 0 50px;
+    }
+
+    .mid .right a {
+    font-size: 28px;
+    padding: 18px 130px;
+    border-radius: 50px;
+    }
+
+    .socials{
+    justify-content: center;
+    margin-top: 150px;
+    }
+
+    .socials a{
+    font-size: 24px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 14px;
+    margin-left: 15px;
+    }
+
+
+
+    footer{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+}
